@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Mondrian Composition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            width: 700px;
+            height: 700px;
+            border: 5px solid black;
+            grid-gap: 10px;
+        }
+
+        .box {
+            border: 5px solid black;
+        }
+
+        .red { background-color: red; }
+        .blue { background-color: blue; }
+        .yellow { background-color: yellow; }
+        .black { background-color: black; }
+        .white { background-color: white; }
+
+        .box1 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box2 {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        .box3 {
+            grid-column: span 3;
+            grid-row: span 1;
+        }
+        .box4 {
+            grid-column: span 1;
+            grid-row: span 3;
+        }
+        .box5 {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .box6 {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        .box7 {
+            grid-column: span 3;
+            grid-row: span 3;
+        }
+
+        .box8 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box red box7"></div>
+        <div class="box blue box2"></div>
+        <div class="box yellow box3"></div>
+        <div class="box black box4"></div>
+        <div class="box white box5"></div>
+        <div class="box yellow box6"></div>
+        <div class="box blue box8"></div>
+        <div class="box red box1"></div>
+        <div class="box black box2"></div>
+    </div>
+
+</body>
+</html>
